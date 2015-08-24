@@ -1,0 +1,3 @@
+# WebPong
+
+Interactive web game.
