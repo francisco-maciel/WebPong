@@ -1,0 +1,24 @@
+{
+  "name": "WebPong",
+  "version": "0.0.1",
+  "description": "Interactive web browser ping pong game",
+  "main": "app.js",
+  "scripts": {
+    "start": "gulp run",
+    "watch": "gulp watch",
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/francisco-maciel/WebPong.git"
+  },
+  "author": "Francisco Maciel",
+  "dependencies": {
+    "express": "^4.12.4",
+    "gulp": "^3.8.11",
+    "gulp-nodemon": "^2.0.3",
+    "socket.io": "^1.3.5",
+    "socket.io-client": "^1.3.5",
+    "nodemon": "^1.2.1"
+  }
+}
