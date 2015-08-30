@@ -1,3 +1,3 @@
 # WebPong
 
-Interactive web game.
+Interactive web game, with browser and mobile version.
