@@ -1,15 +1,24 @@
 var http = require('http');
 var restify = require('restify');
+var express = require('express');
+var app = express();
+
+app.set('view engine', 'ejs');
+app.use(express.static('public'));
 
 function respond(req, res, next) {
   res.send('hello ' + req.params.name);
   next();
 }
 
-var server = restify.createServer();
-server.get('/hello/:name', respond);
-server.head('/hello/:name', respond);
+app.get('/', function(req, res, next) {
+	res.render('index', { title: 'The index page!' })
+	next();
+});
 
-server.listen(1337, function() {
-  console.log('%s listening at %s', server.name, server.url);
+app.get('/hello/:name', respond);
+app.head('/hello/:name', respond);
+
+var listener = app.listen(1337, function() {
+  console.log('Listening at %s', JSON.stringify(listener.address().port));
 });
