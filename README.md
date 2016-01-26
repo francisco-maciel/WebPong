@@ -1,14 +1,14 @@
 # WebPong 
->Work in progress
 
 Interactive ping pong web game, with browser and mobile version.
+>Work in progress
 
 ---
 
 ## Installation
 
 #### Requirements
-To run / install this game, you'll need: 
+ 
 - Node.js & npm
 
 #### Dependencies
