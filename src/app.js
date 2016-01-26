@@ -16,6 +16,13 @@ app.get('/', function(req, res, next) {
 	next();
 });
 
+
+app.get('/mobile', function(req, res, next) {
+	res.render('mobile', { data: 'data' })
+	next();
+});
+
+
 app.get('/hello/:name', respond);
 app.head('/hello/:name', respond);
 
