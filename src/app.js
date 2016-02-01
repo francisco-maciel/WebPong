@@ -37,4 +37,10 @@ server.listen(1337, function() {
 
 io.on('connection', function(socket){
   console.log('a user connected');
+  
+    socket.on('direction', function(data){
+    console.log(data);
+  });
+  
 });
+

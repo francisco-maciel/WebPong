@@ -13,8 +13,8 @@
 
      <div class="content">
             <h3>Swing types:</h3>
-			<button type="button" class="btn btn-info btn-lg">LEFT</button>
-			<button type="button" class="btn btn-info btn-lg">RIGHT</button>
+			<button id="b-left" type="button" class="btn btn-info btn-lg">LEFT</button>
+			<button  id="b-right" type="button" class="btn btn-info btn-lg">RIGHT</button>
 
     </div>
 
@@ -24,8 +24,26 @@
     
     <script src="/js/socket.io.js"></script>
     <script src="/js/jquery-2.2.0.js"></script>
+
     <script>
         var socket = io();
+        socket.on('connect',function(){
+            console.log('connected to server');
+        });
+        
+        function emitDirection(d) {
+            socket.emit('direction',{direction: d});
+        }
+        
+        $('#b-left').click(function() {
+            emitDirection('left');
+        });
+        
+        $('#b-right').click(function() {
+            emitDirection('right');
+        });
+
+
     </script>
 </body>
 </html>
