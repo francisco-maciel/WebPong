@@ -39,7 +39,8 @@ io.on('connection', function(socket){
   console.log('a user connected');
   
     socket.on('direction', function(data){
-    console.log(data);
+		io.emit('direction', data);
+		console.log(data);
   });
   
 });
